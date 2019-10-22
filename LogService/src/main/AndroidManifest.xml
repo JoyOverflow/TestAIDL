@@ -21,6 +21,9 @@
             android:name=".MessageService"
             android:enabled="true"
             android:exported="true">
+            <intent-filter>
+                <action android:name="ouyj.hyena.com.logservice.IMessageService" />
+            </intent-filter>
         </service>
     </application>
 
