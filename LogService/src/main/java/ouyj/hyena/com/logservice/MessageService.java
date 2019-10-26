@@ -13,8 +13,21 @@ public class MessageService extends Service {
     }
 
     @Override
-    public IBinder onBind(Intent intent) {
+    public void onCreate() {
+        Log.d(TAG , "onCreate");
+        super.onCreate();
+    }
 
+
+    /**
+     * 客户绑定服务端时触发
+     * @param intent
+     * @return
+     */
+    @Override
+    public IBinder onBind(Intent intent) {
+        Log.d(TAG , "onBind");
+        //实现接口内的抽象类
         return new IMessageService.Stub() {
             @Override
             public void log2(Message msg) throws RemoteException {
@@ -22,5 +35,22 @@ public class MessageService extends Service {
                 Log.d(TAG , result);
             }
         };
+    }
+
+
+    @Override
+    public void onRebind(Intent intent) {
+        Log.d(TAG , "onRebind");
+        super.onRebind(intent);
+    }
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.d(TAG , "onUnbind");
+        return super.onUnbind(intent);
+    }
+    @Override
+    public void onDestroy() {
+        Log.d(TAG , "onDestroy");
+        super.onDestroy();
     }
 }

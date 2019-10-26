@@ -15,6 +15,11 @@ public class Message implements Parcelable {
         this.tag = in.readString();
         this.text = in.readString();
     }
+    public Message(String tag, String text) {
+        this.tag = tag;
+        this.text = text;
+    }
+
     public String getTag() { return tag; }
     public void setTag(String tag) { this.tag = tag; }
     public String getText() { return text; }
@@ -43,6 +48,7 @@ public class Message implements Parcelable {
     public static final Parcelable.Creator<Message> CREATOR = new Parcelable.Creator<Message>() {
         @Override
         public Message createFromParcel(Parcel source) {
+            //调用构造方法
             return new Message(source);
         }
         @Override
