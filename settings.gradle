@@ -1,1 +1,1 @@
-include ':app', ':LogService', ':LogClient'
+include ':app', ':LogService', ':LogClient', ':DemoNDK'
