@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    //加载本地库（ouyang.so文件，可省略后缀名）
+    //加载本地库（指定的so文件，可省略后缀名）
     static {
         System.loadLibrary("ouyang");
     }

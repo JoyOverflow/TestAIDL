@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/DemoJNI" />
             <option value="$PROJECT_DIR$/DemoNDK" />
             <option value="$PROJECT_DIR$/LogClient" />
             <option value="$PROJECT_DIR$/LogService" />
